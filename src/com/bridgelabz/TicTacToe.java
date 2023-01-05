@@ -104,8 +104,85 @@ public class TicTacToe {
                 System.exit(0);
             }
         }
+    static boolean computerAsWinner() {
+        if (board[1] == computerSymbol && board[2] == computerSymbol && board[3] == ' ') {
+            board[3] = computerSymbol;
+            return true;
+        } else if (board[1] == computerSymbol && board[3] == computerSymbol && board[2] == ' ') {
+            board[2] = computerSymbol;
+            return true;
+        }else if (board[2] == computerSymbol && board[3] == computerSymbol && board[1] == ' ') {
+            board[1] = computerSymbol;
+            return true;
+        } else if (board[4] == computerSymbol && board[5] == computerSymbol && board[6] == ' ') {
+            board[6] = computerSymbol;
+            return true;
+        }else if (board[4] == computerSymbol && board[6] == computerSymbol && board[5] == ' ') {
+            board[5] = computerSymbol;
+            return true;
+        } else if (board[6] == computerSymbol && board[5] == computerSymbol && board[4] == ' ') {
+            board[4] = computerSymbol;
+            return true;
+        } else if (board[7] == computerSymbol && board[8] == computerSymbol && board[9] == ' ') {
+            board[9] = computerSymbol;
+            return true;
+        } else if (board[7] == computerSymbol && board[9] == computerSymbol && board[8] == ' ') {
+            board[8] = computerSymbol;
+            return true;
+        } else if (board[9] == computerSymbol && board[8] == computerSymbol && board[7] == ' ') {
+            board[7] = computerSymbol;
+            return true;
+        } else if (board[1] == computerSymbol && board[4] == computerSymbol && board[7] == ' ') {
+            board[7] = computerSymbol;
+            return true;
+        } else if (board[1] == computerSymbol && board[7] == computerSymbol && board[4] == ' ') {
+            board[4] = computerSymbol;
+            return true;
+        } else if (board[7] == computerSymbol && board[4] == computerSymbol && board[1] == ' ') {
+            board[1] = computerSymbol;
+            return true;
+        } else if (board[2] == computerSymbol && board[5] == computerSymbol && board[8] == ' ') {
+            board[8] = computerSymbol;
+            return true;
+        } else if (board[2] == computerSymbol && board[8] == computerSymbol && board[5] == ' ') {
+            board[5] = computerSymbol;
+            return true;
+        } else if (board[5] == computerSymbol && board[8] == computerSymbol && board[2] == ' ') {
+            board[2] = computerSymbol;
+            return true;
+        } else if (board[3] == computerSymbol && board[6] == computerSymbol && board[9] == ' ') {
+            board[9] = computerSymbol;
+            return true;
+        } else if (board[3] == computerSymbol && board[9] == computerSymbol && board[6] == ' ') {
+            board[6] = computerSymbol;
+            return true;
+        } else if (board[6] == computerSymbol && board[9] == computerSymbol && board[3] == ' ') {
+            board[3] = computerSymbol;
+            return true;
+        } else if (board[1] == computerSymbol && board[5] == computerSymbol && board[9] == ' ') {
+            board[9] = computerSymbol;
+            return true;
+        }else if (board[1] == computerSymbol && board[9] == computerSymbol && board[5] == ' ') {
+            board[5] = computerSymbol;
+            return true;
+        } else if (board[5] == computerSymbol && board[9] == computerSymbol && board[1] == ' ') {
+            board[1] = computerSymbol;
+            return true;
+        } else if (board[3] == computerSymbol && board[5] == computerSymbol && board[7] == ' ') {
+            board[7] = computerSymbol;
+            return true;
+        } else if (board[3] == computerSymbol && board[7] == computerSymbol && board[5] == ' ') {
+            board[5] = computerSymbol;
+            return true;
+        } else if (board[7] == computerSymbol && board[5] == computerSymbol && board[3] == ' ') {
+            board[3] = computerSymbol;
+            return true;
+        }
+        return false;
+    }
 
-        static void firstToStartGame() {
+
+    static void firstToStartGame() {
             int toss = (int) (Math.random() * 10) % 2;
             if (toss == 0) {
                 System.out.println("Computer is starts the play first.");
@@ -123,6 +200,7 @@ public class TicTacToe {
          assignSymbol();
          showBoard();
          firstToStartGame();
+         //computerAsWinner();
     }
 
 }
